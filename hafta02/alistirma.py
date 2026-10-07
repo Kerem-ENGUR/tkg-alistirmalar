@@ -9,14 +9,20 @@
 # Sayı 0'dan büyükse "pozitif", küçükse "negatif", 0 ise "sıfır" döndürün.
 # Örnek: isaret(5) -> "pozitif"
 def isaret(sayi):
-    pass
+    if sayi > 0:
+        return "pozitif"
+    elif sayi < 0:
+        return "negatif"
+    elif sayi == 0:
+        return "sıfır"
 
 
 # 2. Dönem notu
 # Vizenin %40'ı ile finalin %60'ını toplayıp döndürün.
 # Örnek: donem_notu(50, 70) -> 62.0
 def donem_notu(vize, final):
-    pass
+    toplam = (vize*0.4) + (final*0.6)
+    return toplam
 
 
 # 3. Harf sayma
@@ -24,18 +30,34 @@ def donem_notu(vize, final):
 # Büyük/küçük harf ayrımı yapın: "A" ile "a" farklı harflerdir.
 # Örnek: harf_say("merhaba", "a") -> 2
 def harf_say(metin, harf):
-    pass
+    sayac = 0
+    for i in metin:
+        if i == harf:
+            sayac = sayac+1
+    return sayac
 
 
 # 4. Faktöriyel
 # n! = 1 * 2 * 3 * ... * n değerini bir döngüyle hesaplayın. 0! = 1'dir.
 # Örnek: faktoriyel(5) -> 120
 def faktoriyel(n):
-    pass
+    
+    sonuc = 1
+    for i in range(n+1):
+        if i == 0:
+            pass
+        else:
+            sonuc = sonuc * i
+    return sonuc
 
 
 # 5. Geçenler
 # Nottan 60 ve üzeri olanları, sıralarını bozmadan yeni bir liste olarak döndürün.
 # Örnek: gecenler([70, 45, 90]) -> [70, 90]
 def gecenler(notlar):
-    pass
+    a = list()
+    for i in notlar:
+        if i >= 60:
+            a.append(i)
+    return a
+
