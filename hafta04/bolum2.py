@@ -45,3 +45,4 @@ def yuzde_degisim(eski, yeni):
     if eski == 0:
         raise ValueError("eski değer 0 olamaz")
     return (yeni - eski) / eski * 100
+
