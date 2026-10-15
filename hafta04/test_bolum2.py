@@ -10,10 +10,14 @@ from bolum2 import sifre_gucu, otopark_ucreti, yuzde_degisim
 
 def test_kisa_sifre_zayif():
     assert sifre_gucu("abc") == "zayıf"
-    assert sifre_gucu("kerokeroker2") == "güçlü"
-    assert sifre_gucu("kerokerokero1") == "güçlü"
-    assert sifre_gucu("kerokeroker") == "orta"
-    assert sifre_gucu("kerokero") == "zayıf"
+    assert sifre_gucu("kereme0805")=="orta"
+    assert sifre_gucu("1"*9)=="orta"
+    assert sifre_gucu("a"*13)=="güçlü"
+    assert sifre_gucu("b"*17)=="güçlü"
+    assert sifre_gucu("3"*7)=="zayıf"
+    assert sifre_gucu("4"*8)=="orta"
+    assert sifre_gucu("k"*11)=="orta"
+    assert sifre_gucu("b"*12) =="güçlü"
     
 def test_bos_sifre_hata_verir():
     with pytest.raises(ValueError, match="şifre boş olamaz"):
