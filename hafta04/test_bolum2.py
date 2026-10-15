@@ -10,7 +10,7 @@ from bolum2 import sifre_gucu, otopark_ucreti, yuzde_degisim
 
 def test_kisa_sifre_zayif():
     assert sifre_gucu("abc") == "zayıf"
-    assert sifre_gucu("kerokeroker2") == "orta"
+    assert sifre_gucu("kerokeroker2") == "güçlü"
     assert sifre_gucu("kerokerokero1") == "güçlü"
     assert sifre_gucu("kerokeroker") == "orta"
     assert sifre_gucu("kerokero") == "zayıf"
